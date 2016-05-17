@@ -13,6 +13,7 @@ public function __construct(){
 
 
 public function validarAcceso(){
+	/*
 	$this->ci->load->model('DBMtsp');
 	
 	$class = $this->ci->router->class;
@@ -21,7 +22,7 @@ public function validarAcceso(){
 
 	if(!($this->ci->DBMtsp->datos($class,$method))){
 		redirect(base_url());
-	}
+	}*/
 }
 	
 }

@@ -12,27 +12,27 @@ function validarDatos($data){
 		$queryProfesor = $this->db->get('profesor');
 		if($queryAlumno->num_rows()>0){
 		 foreach ($queryAlumno->result() as $row){
-		 	if(($row->Matricula == $data['nombre']) && ($row->Contraseña == $data['password'])){
-		 		$this->db->insert('accesos',array('Rol'=> 'Estudiante','Nombre'=> $row->nomAlumno,'Clave/Mat'=>$row->Matricula, 'fecha_acceso'=> date("Y-m_d") ));
+		 	if(($row->matricula == $data['nombre']) && ($row->password == $data['password'])){
+		 		/*$this->db->insert('accesos',array('Rol'=> 'Estudiante','Nombre'=> $row->nomAlumno,'Clave/Mat'=>$row->Matricula, 'fecha_acceso'=> date("Y-m_d") ));*/
 		 		redirect(base_url()."Ctsp/CalificarTareas");
 		 	}
 		 }
 
 
 
-	}  if($queryProfesor->num_rows()>0){
-		 foreach ($queryProfesor->result() as $row){
-		 	if(($row->cveEmp == $data['nombre']) && ($row->Contraseña == $data['password'])){
-		 		$this->db->insert('accesos',array('Rol'=> 'Profesor','Nombre'=> $row->nomProfesor,'Clave/Mat'=>$row->cveEmp, 'fecha_acceso'=> date("Y-m_d") ));
-		 		redirect(base_url()."Ctsp/prueba");
-		 	}
-  		
-		redirect(base_url()."Ctsp");
-		}
+		}  if($queryProfesor->num_rows()>0){
+			 foreach ($queryProfesor->result() as $row){
+			 	if(($row->cveEmp == $data['nombre']) && ($row->password == $data['password'])){
+			 		//$this->db->insert('accesos',array('Rol'=> 'Profesor','Nombre'=> $row->nomProfesor,'Clave/Mat'=>$row->cveEmp, 'fecha_acceso'=> date("Y-m_d") ));
+			 		redirect(base_url()."Ctsp/prueba");
+			 	}
+	  		
+			redirect(base_url()."Ctsp");
+			}
 
 }
 
-redirect(base_url());
+redirect(base_url()."Ctsp");
 
 }
 
