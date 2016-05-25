@@ -1,0 +1,43 @@
+header {
+	background:	#006633;
+	margin-bottom: 25px;
+	color:#fff;
+}
+footer {
+	background:#16a085;
+	margin-top: 15px;
+	color:#fff;
+}
+footer p, address{
+	text-align: center;
+	padding-top: 10px;
+}
+.main { 
+	margin-left: 15px;
+	margin-right: 20px;
+}
+
+article{
+	background:#f2f2f2;
+}
+.color1 {
+	background: #34495e;
+	color:#fff;
+}
+
+aside {
+	background:#c0392b;
+	color:#fff;
+}
+img{
+	float: left;
+	margin: 7px;
+	height: 80px;
+	width: 150px;
+
+}
+h2{
+	padding: 8px;
+	
+}
+

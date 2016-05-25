@@ -46,7 +46,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				<div class="col-md-7">
 				
 					<!-- /.logo -->
-					<div class="logo wow fadeInDown"> <a href=""><img src="<?php echo base_url();?>../assets/images/logo.png" alt="logo"></a></div>
+					<div class="logo wow fadeInDown"> <a href=""><img src="<?php echo base_url();?>assets/images/logo.png" alt="logo"></a></div>
 
 					<!-- /.main title -->
 						<h1 class="wow fadeInLeft">
@@ -73,7 +73,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				
 					<div class="signup-header wow fadeInUp">
 						<h3 class="form-title text-center">Login</h3>
-						<?= form_open("/Ctsp/comprobarDatos") ?>
+						<?= form_open("/login/comprobarDatos") ?>
 						
 							<div class="form-group">
 								<input class="form-control input-lg" name="nombre" id="name" type="text" placeholder="Ingrese matrícula" required>

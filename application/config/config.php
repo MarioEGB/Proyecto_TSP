@@ -23,7 +23,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = 'http://localhost:8080/Proyecto_TSP';
+$config['base_url'] = 'http://localhost:8080/Proyecto_TSPLocal';
 
 /*
 |--------------------------------------------------------------------------
@@ -314,7 +314,7 @@ $config['cache_query_string'] = FALSE;
 | https://codeigniter.com/user_guide/libraries/encryption.html
 |
 */
-$config['encryption_key'] = '8e82b9a9d69e14597795553a0b0136fa';
+$config['encryption_key'] = '12345';/*'8e82b9a9d69e14597795553a0b0136fa'*/
 
 /*
 |--------------------------------------------------------------------------
