@@ -20,8 +20,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 <!-- Colors -->
 <link href="<?php echo base_url();?>assets/css/css-index.css" rel="stylesheet" media="screen">
-<!-- <link href="css/css-index-green.css" rel="stylesheet" media="screen"> -->
-<!-- <link href="css/css-index-purple.css" rel="stylesheet" media="screen"> -->
+<!--<link href="assets/css/css-index-green.css" rel="stylesheet" media="screen"> -->
+<!-- <link href="assets/css/css-index-purple.css" rel="stylesheet" media="screen"> -->
 <!-- <link href="css/css-index-red.css" rel="stylesheet" media="screen"> -->
 <!-- <link href="css/css-index-orange.css" rel="stylesheet" media="screen"> -->
 <!-- <link href="css/css-index-yellow.css" rel="stylesheet" media="screen"> -->
@@ -55,7 +55,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 					<!-- /.header paragraph -->
 					<div class="landing-text wow fadeInUp">
-						<p>Este sitio web tiene la intencion de apoyar a los profesores de la UAM-I al calificar tareas (programas en JAVA) de forma automática, esto se logra mediante el uso de la librería JUnit.</p>
+						<p>Este sitio web tiene la intención de apoyar a los profesores de la UAM-I al calificar tareas (programas en JAVA) de forma automática, esto se logra mediante el uso de la librería JUnit.</p>
 					</div>				  
 
 					<!-- /.header button -->

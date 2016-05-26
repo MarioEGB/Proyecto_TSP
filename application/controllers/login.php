@@ -24,16 +24,12 @@ function comprobarDatos(){
 		$data = array('nombre' => $this->input->post('nombre'),'password' => $this->input->post('password'));
 		$resultado = $this->DBMtsp->validarDatos($data);
 		//crear sesion
-		/*$usuario_data = array(
-               'id' => $resultado->identificador,
-               'nombre' => $resultado->nombre,
-               'roll' => $resultado->roll,
-               'logueado' => TRUE
-         		);*/
 		$this->session->set_userdata($resultado);
 		if($resultado['roll']==0)
-        	redirect(base_url()."/profesor");
-		
+        	redirect(base_url()."profesor");
+		elseif($resultado['roll']==1){
+			redirect(base_url()."alumno");
+		}
 	}
 
 }

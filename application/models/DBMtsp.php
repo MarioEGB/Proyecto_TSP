@@ -14,7 +14,10 @@ function validarDatos($data){
 		 foreach ($queryAlumno->result() as $row){
 		 	if(($row->matricula == $data['nombre']) && ($row->password == $data['password'])){
 		 		/*$this->db->insert('accesos',array('Rol'=> 'Estudiante','Nombre'=> $row->nomAlumno,'Clave/Mat'=>$row->Matricula, 'fecha_acceso'=> date("Y-m_d") ));*/
-		 		redirect(base_url()."");
+		 		$data['nombre'] = $row->nomAlumno;
+		 		$data['roll'] = $row->roll;
+		 		$data['matricula'] = $row->matricula;
+		 		return $data;
 		 	}
 		 }
 
