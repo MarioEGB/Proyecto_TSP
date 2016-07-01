@@ -12,9 +12,11 @@ function validarDatos($data){
 		$queryProfesor = $this->db->get('profesor');
 		if($queryAlumno->num_rows()>0){
 		 foreach ($queryAlumno->result() as $row){
-		 	if(($row->matricula == $data['nombre']) && ($row->password == $data['password'])){
+		 	if(($row->matricula == $data['mat']) && ($row->password == $data['password'])){
 		 		/*$this->db->insert('accesos',array('Rol'=> 'Estudiante','Nombre'=> $row->nomAlumno,'Clave/Mat'=>$row->Matricula, 'fecha_acceso'=> date("Y-m_d") ));*/
 		 		$data['nombre'] = $row->nomAlumno;
+		 		$data['apellpaterno'] = $row->apellido_paterno;
+		 		$data['apellmaterno'] = $row->apellido_materno;
 		 		$data['roll'] = $row->roll;
 		 		$data['matricula'] = $row->matricula;
 		 		return $data;
@@ -25,8 +27,10 @@ function validarDatos($data){
 
 		}  if($queryProfesor->num_rows()>0){
 			 foreach ($queryProfesor->result() as $row){
-			 	if(($row->cveEmp == $data['nombre']) && ($row->password == $data['password'])){
+			 	if(($row->cveEmp == $data['mat']) && ($row->password == $data['password'])){
 			 		$data['nombre'] = $row->nomProfesor;
+			 		$data['apellpaterno'] = $row->apellido_paterno;
+		 			$data['apellmaterno'] = $row->apellido_materno;
 			 		$data['roll'] = $row->roll;
 			 		$data['identificador'] = $row->cveEmp;
 			 		return $data;

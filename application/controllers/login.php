@@ -21,7 +21,7 @@ function index(){
 
 function comprobarDatos(){
 		$this->load->model('DBMtsp');
-		$data = array('nombre' => $this->input->post('nombre'),'password' => $this->input->post('password'));
+		$data = array('mat' => $this->input->post('mat'),'password' => $this->input->post('password'));
 		$resultado = $this->DBMtsp->validarDatos($data);
 		//crear sesion
 		$this->session->set_userdata($resultado);
@@ -32,5 +32,9 @@ function comprobarDatos(){
 		}
 	}
 
+	function salir(){
+		$this.session_destroy();
+		redirect(redirect(base_url()."login"));
+	}
 }
 ?>

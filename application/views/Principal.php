@@ -76,7 +76,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						<?= form_open("/login/comprobarDatos") ?>
 						
 							<div class="form-group">
-								<input class="form-control input-lg" name="nombre" id="name" type="text" placeholder="Ingrese matrícula" required>
+								<input class="form-control input-lg" name="mat" id="name" type="text" placeholder="Ingrese matrícula" required>
 							</div>
 							<div class="form-group">
 								<input class="form-control input-lg" name="password" id="email" type="password" placeholder="Ingrese contraseña" required>

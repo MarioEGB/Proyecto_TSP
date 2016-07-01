@@ -15,5 +15,7 @@
 			<h2>Bienvenido al portal JTareas</h2>	
 		</div>
 	</header>
+	<div class="container_fluid">
+  	
 
 

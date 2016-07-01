@@ -1,14 +1,3 @@
-
-<div class="container_fluid">
-  <section class="main row">
-      
-      <ul class="nav nav-pills nav-stacked col-lg-2">
-            <li class="active"><a href="#">Inicio</a></li>
-            <li><a href="#">UEAs</a></li>
-            <li><a href="#">Cuenta</a></li>
-            <li><a href="#">Salir</a></li>
-      </ul>
-      
       <article class="col-lg-10">
           <h3>Bienvenido alumno <?php echo $nombre;?></h3>  
           <?= form_open_multipart("Alumno/calificar")?>
@@ -37,5 +26,4 @@
 			<?= form_close()?>
 
       </article>
-  </section>
-</div>
+
