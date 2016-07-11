@@ -14,14 +14,15 @@
 	 		</tr>
 	 	</thead>
 		 <tbody>
-		 	<?= form_open("/tarea_alumno") ?>	
+		 	<?= form_open("tareas_alumno") ?>	
 	 		<tr>
-	 			<td><input type="label" name="matricula" value="<?php echo $trimestre?>"/></td>
+	 			<td><?php echo $trimestre?></td>
 	 			<td><?php echo $cveuea?></td>
 	 			<td><?php echo $nomuea?></td>
 	 			<td><?php echo $nombreProfesor." ".$apaternoProf." ".$amaternoProf?></td>
 	 			<td align="center"><input type="submit" class="btn btn-success" value="Ver Tareas"/></td>
 	 		</tr>
+	 		<input type="hidden" name="mat" value='<?php echo $matricula ?>'>
 	 		<?= form_close() ?>
 	 	</tbody>
 

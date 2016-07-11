@@ -1,7 +1,7 @@
 <?php 
 if ( ! defined('BASEPATH'))  exit('No direct script access allowed');
 
-class Tarea_alumno extends CI_Controller{
+class Tareas_alumno extends CI_Controller{
 	
 
 	function _construct(){
@@ -11,12 +11,19 @@ class Tarea_alumno extends CI_Controller{
 
 	function index(){
 		$this->load->helper('form');
-		$datosForm = array('mat' => $this->input->post('mat'));
+		$datosFormMatricula = array('mat' => $this->input->post('mat'));
+		$result ['registros']= $this->verTareas($datosFormMatricula);
+		$this->load->view('Plantilla/header');
+		$this->load->view('Alumno/menuNav');
+		$this->load->view('Alumno/tareas', $result);
+		$this->load->view('Plantilla/footer');
 		
 	}
 
-	function verTareas(){
-		
+	function verTareas($matriculaAlumno){
+		$this->load->model("tareas");
+		$resultTareas = $this->tareas->getTareas($matriculaAlumno);
+		return $resultTareas;
 	}
 
 

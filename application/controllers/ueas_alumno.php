@@ -16,7 +16,8 @@ class Ueas_alumno extends CI_Controller{
 		$result = $this->getUeas($matricula);
 		$this->load->view('Alumno/menuNav');
 		$data = array();
-		$data['nombreAlumno'] = $this->session->userdata('nombre');
+		$data['matricula'] = $matricula;
+ 		$data['nombreAlumno'] = $this->session->userdata('nombre');
 		$data['apaternoAlumno'] = $this->session->userdata('apellpaterno');
 		$data['amaternoAlumno'] = $this->session->userdata('apellmaterno');
 		$data['trimestre'] = $result->trimestre;
